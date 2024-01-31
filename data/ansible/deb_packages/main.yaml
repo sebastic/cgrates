@@ -72,11 +72,12 @@
 
     - name: git clone cgrates
       git:
-        repo: https://github.com/cgrates/cgrates.git
+        repo: https://github.com/sebastic/cgrates.git
         dest: "{{ cgrates_dir }}"
         update: yes
         force: yes
-        version: "{{ cgrates_branch }}"
+#        version: "{{ cgrates_branch }}"
+        version: "debian-package"
       become: yes
       become_user: "{{ user }}"
 
